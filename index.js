@@ -130,6 +130,32 @@ function verisil(i) {
 }
 
 
+function ara() {
+    var input,filtre,kullanici,tr,td,i;
+    input=document.getElementById("veriara");
+    filtre=input.value.toUpperCase()
+    kullanici=document.getElementById("kullanici");
+    tr=kullanici.getElementsByTagName("tr");
+
+    for (var i = 0; i < tr.length; i++) {
+        td=tr[i].getElementsByTagName("td")[0];
+        if (td) {
+            if (td.innerHTML.toUpperCase().indexOf(filtre)>-1) {
+                tr[i].style.display="";
+            }
+            else{
+                tr[i].style.display="none";
+
+            }
+        }
+    }  
+}
+  
+
+
+
+
+
 
 // veriduzenle fonksiyonu tablo içinde yer alan "Düzenle" ismindeki butonumuza basıldığında o satıra ait tüm veriler
 // form elemanlarımızın ilgili yerlerine gelir. Değiştirilmek istenen veriler düzenlendikten sonra 
